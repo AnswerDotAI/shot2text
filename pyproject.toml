@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shot2text"
+dynamic = ["version"]
+description = "A macmage cantrip: hotkey a region screenshot into transcribed text on the clipboard"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{name = "Pol Alvarez", email = "pol@answer.ai"}]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = ['macmage>=0.1.0', 'python-fastllm>=0.0.43', 'aidialog>=0.0.22']
+
+[project.urls]
+Homepage = "https://github.com/AnswerDotAI/shot2text"
+
+[tool.setuptools.dynamic]
+version = { attr = "shot2text.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["shot2text"]
