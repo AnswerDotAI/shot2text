@@ -22,9 +22,12 @@ local = ['pyobjc-framework-Vision>=12.2.2', 'fastcocoa>=0.1.0']
 
 [project.urls]
 Homepage = "https://github.com/AnswerDotAI/shot2text"
+Repository = "https://github.com/AnswerDotAI/shot2text"
 
 [tool.setuptools.dynamic]
 version = { attr = "shot2text.__version__" }
 
 [tool.setuptools.packages.find]
 include = ["shot2text"]
+
+[tool.nbdev]
