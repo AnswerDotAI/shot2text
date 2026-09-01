@@ -1,0 +1,7 @@
+macoS
+grants permissions per program, and drops them when a binary is
+rebuilt
+a venv moves. With Python that means scripts break for no
+reason, and settings fills with entries called python3.13.
+Imp is a tiny signed app that holds the grants: anything you run
+through it has them.

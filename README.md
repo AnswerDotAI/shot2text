@@ -42,3 +42,38 @@ mage(shot2text, keys='ctrl-opt-t')
 ```
 
 Once the file is saved and the permissions granted ctrl-opt-t (ctrl-alt on PC keyboards) captures. After you change `.env`, run `macmage --install`; a `config.py` save alone does not pick up new environment variables.
+
+## Other models
+
+`shot2text` transcribes with Gemini. `mk_shot2text` builds the same cantrip for any [fastllm](https://github.com/AnswerDotAI/fastllm)-supported model, or `'vision'` for on-device Apple Vision. 
+
+Apple Vision is free, fast and on-device, but noticeably worse on code (see the comparison below). Vision needs `pip install shot2text[local]` and no API key:
+
+```
+from shot2text import mk_shot2text
+
+mage(mk_shot2text('vision'), keys='ctrl-opt-l')
+mage(mk_shot2text('claude-haiku-4-5', effort=None), keys='ctrl-opt-t')
+```
+
+## Comparison
+
+Similarity to ground truth per test image, then per-engine time and cost ranges. Regenerate with `python tests/eval_ocr.py`.
+
+You can see the input images, ground truth and transcripts of each model  in [tests](tests):
+
+| image | vision | gemini |
+|---|---|---|
+| code | 0.796 | 1.000 |
+| code_small | 0.771 | 1.000 |
+| prose | 0.979 | 1.000 |
+| terminal_ui | 0.925 | 0.980 |
+
+| engine | time/call | cost/call |
+|---|---|---|
+| vision | 0.1–1.1s | free |
+| gemini | 2.2–5.5s | $0.001–$0.002 |
+
+## Contributing
+
+If you find a model that works better for you, please add it to the comparison table! 

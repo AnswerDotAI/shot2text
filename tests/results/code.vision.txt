@@ -1,0 +1,7 @@
+def load_cfg(path) :
+"Read a cfg file, merging over DEFAULTS"
+config = dict (DEFAULTS)
+for line in open(path). read(),splitlines():
+k, v = line-split ('=', 1)
+config[k.strip()] = v.strip()
+return config

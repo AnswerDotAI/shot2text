@@ -1,0 +1,22 @@
+• The newest Desktop image is from Aug 29 - two days old, so "just screenshotted"
+doesn't match. Checking whether screenshots are configured to save elsewhere:
+Called clikernel 4 times
+• I can't find it - surfacing this rather than guessing further. What I checked:
+- Desktop: newest image is Screenshot 2026-08-29 at 06.49.23.png, two days old.
+- Screenshot save location: no custom com.apple.screencapture location is set, so
+files should go to Desktop.
+- Whole home folder (3 levels deep): no png/jpg/heic modified in the last hour.
+- Clipboard: holds Chromium text, no image data - so it wasn't a copy-to-clipboard
+capture either.
+So the screenshot didn't land anywhere I can see. Possibilities: the capture
+didn't actually fire (easy to do with the Cmd-Shift-3/4/5 variants), it was taken
+on a different machine, or a third-party screenshot tool (CleanShot et al.) put it
+in its own folder. Can
+you check whether it exists - or just take it again - and
+tell me where it saves? The Aug 29 screenshot is there if you'd rather use that
+one, but it predates the message you meant to capture.
+Jump to bottom (click) +
+> My bad, I took it now, check again
+[Fable 5:high] 20% ctx • 5h 19% • 7d 7% • shot2text
+-- INSERT -- ›* auto mode on (shift+tab to cycle) • ‹ for agents
+/Ic
